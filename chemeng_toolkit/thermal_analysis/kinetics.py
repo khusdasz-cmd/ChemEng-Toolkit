@@ -13,6 +13,7 @@ Reaction models available:
 """
 
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy.stats import linregress
 
 from chemeng_toolkit.utils.plot_helpers import COLORS, SAMPLE_LABELS, setup_plot_style
@@ -374,10 +375,15 @@ def plot_ea_vs_alpha(ea_data, labels=None, output_path=None, show=True):
         vals = ea_data[label]
         color = COLORS[idx % len(COLORS)]
         marker = markers[idx % len(markers)]
-        ax.plot(alpha, vals, color=color, linewidth=1.8,
+        valid = [(a, v) for a, v in zip(alpha, vals)
+                 if v is not None and not np.isnan(v)]
+        if not valid:
+            continue
+        valid_alpha, valid_vals = zip(*valid)
+        ax.plot(valid_alpha, valid_vals, color=color, linewidth=1.8,
                 marker=marker, markersize=7, markerfacecolor="white",
                 markeredgewidth=1.5, label=label, zorder=5)
-        for a, v in zip(alpha, vals):
+        for a, v in zip(valid_alpha, valid_vals):
             ax.annotate(f"{v:.1f}", xy=(a, v), xytext=(5, 8),
                         textcoords="offset points", fontsize=7.5,
                         color=color, ha="center", va="bottom")

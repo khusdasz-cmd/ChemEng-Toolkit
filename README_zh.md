@@ -11,6 +11,20 @@
 - **FT-IR 光谱** — 读取 CSV 光谱数据，绘制垂直偏移堆叠图，自动标注特征吸收峰
 - **出版级图表** — 基于 Matplotlib，统一配色方案和专业样式
 
+## 示例图集
+
+| TG 曲线 | DTG 曲线 |
+|:---:|:---:|
+| ![TG](examples/tga_tg_curves.png) | ![DTG](examples/tga_dtg_curves.png) |
+
+| 双轴 TGA-DTG | Ea vs. Alpha |
+|:---:|:---:|
+| ![双轴图](examples/tga_dual_axis.png) | ![活化能](examples/kinetics_ea_alpha.png) |
+
+| FT-IR 堆叠光谱 |
+|:---:|
+| ![FT-IR](examples/ftir_stacked.png) |
+
 ## 快速开始
 
 ```bash

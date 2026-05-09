@@ -22,3 +22,5 @@ Thumbs.db
 *.png
 *.pdf
 *.tiff
+# Allow example figures for GitHub homepage
+!examples/*.png

@@ -11,6 +11,20 @@ Built by a chemical engineering student for undergraduate research and coursewor
 - **FT-IR Spectroscopy** — Load CSV spectral data, stacked offset plots with absorption peak annotations
 - **Publication-quality plots** — Matplotlib-based with consistent color schemes and professional styling
 
+## Example Gallery
+
+| TG Curves | DTG Curves |
+|:---:|:---:|
+| ![TG](examples/tga_tg_curves.png) | ![DTG](examples/tga_dtg_curves.png) |
+
+| Dual-Axis TGA-DTG | Ea vs. Alpha |
+|:---:|:---:|
+| ![Dual-Axis](examples/tga_dual_axis.png) | ![Ea-Alpha](examples/kinetics_ea_alpha.png) |
+
+| FT-IR Stacked Spectra |
+|:---:|
+| ![FT-IR](examples/ftir_stacked.png) |
+
 ## Quick Start
 
 ```bash
